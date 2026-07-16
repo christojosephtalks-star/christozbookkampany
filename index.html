@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CHRISTOZ BOOK KAMPANY</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#090909;
+color:#fff;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#7d5d00 0%,transparent 40%),
+radial-gradient(circle at bottom,#111 0%,#000 75%);
+z-index:-2;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(12px);
+z-index:1000;
+border-bottom:1px solid rgba(255,215,0,.2);
+}
+
+.logo{
+font-family:'Cinzel',serif;
+font-size:28px;
+font-weight:700;
+color:#FFD700;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+transition:.3s;
+font-weight:500;
+}
+
+nav ul li a:hover{
+color:#FFD700;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:120px 8%;
+flex-wrap:wrap;
+}
+
+.hero img{
+width:360px;
+border-radius:20px;
+border:3px solid gold;
+box-shadow:0 0 40px rgba(255,215,0,.4);
+transition:.4s;
+}
+
+.hero img:hover{
+transform:scale(1.03);
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero-text h3{
+color:#FFD700;
+font-weight:500;
+margin-bottom:10px;
+letter-spacing:3px;
+}
+
+.hero-text h1{
+font-family:'Cinzel',serif;
+font-size:58px;
+margin-bottom:15px;
+}
+
+.hero-text h2{
+font-size:32px;
+margin-bottom:20px;
+color:#FFD700;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+color:#ddd;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#FFD700;
+color:#000;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+margin-right:15px;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(255,215,0,.4);
+}
+
+.outline{
+background:transparent;
+border:2px solid gold;
+color:#FFD700;
+}
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+font-family:'Cinzel',serif;
+font-size:42px;
+text-align:center;
+color:#FFD700;
+margin-bottom:50px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+border:2px solid gold;
+}
+
+.card{
+background:#111;
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(255,215,0,.15);
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.card p{
+line-height:1.9;
+color:#ddd;
+}
+
+.book{
+text-align:center;
+}
+
+.book h3{
+font-size:30px;
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.book p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.read-btn{
+padding:18px 45px;
+background:#FFD700;
+border:none;
+border-radius:40px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.read-btn:hover{
+transform:scale(1.05);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+border-radius:20px;
+border:2px solid gold;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:18px 0;
+font-size:20px;
+}
+
+.contact a{
+color:#FFD700;
+text-decoration:none;
+}
+
+footer{
+background:#050505;
+text-align:center;
+padding:35px;
+margin-top:80px;
+border-top:1px solid rgba(255,215,0,.2);
+color:#bbb;
+}
+
+@media(max-width:900px){
+
+.hero{
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">CHRISTOZ BOOK KAMPANY</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#book">Book</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+<img src="images/christo.jpg" alt="Christo Joseph">
+
+<div class="hero-text">
+
+<h3>WELCOME TO MY OFFICIAL WEBSITE</h3>
+
+<h1>I'm Christo Joseph</h1>
+
+<h2>Author • Storyteller • Dreamer</h2>
+
+<p>
+Knowledge grows when it is shared.
+This is my official website where I share my writing journey and my books with readers around the world.
+</p>
+
+<a href="#book" class="btn">📖 Read My Book</a>
+
+<a href="#about" class="btn outline">About Me</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<img src="images/christo.jpg" alt="Christo Joseph">
+
+<div class="card">
+
+<p>
+
+Hello, I'm <b>Christo Joseph</b>.
+
+<br><br>
+
+Although this is my first published book, my passion for writing began when I was in the <b>6th grade</b>. Since then, I have continued to develop my creativity, ideas, and storytelling skills.
+
+<br><br>
+
+Publishing my first book is a dream come true. Through <b>CHRISTOZ BOOK KAMPANY</b>, I hope to inspire readers, encourage learning, and share meaningful stories with people around the world.
+
+<br><br>
+
+This is only the beginning of my journey, and I look forward to sharing many more books in the future.
+
+<br><br>
+
+<i>"Every great journey begins with a single page."</i>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="book">
+
+<h2 class="section-title">My Book</h2>
+
+<div class="card book">
+
+<h3>📖 COMING SOON</h3>
+
+<p>
+
+My first book will soon be available on this website.
+
+There will be <b>no payment</b>, <b>no registration</b>, and <b>no subscription</b>.
+
+Simply click the button below when the book is released and enjoy reading.
+
+</p>
+
+<button class="read-btn" onclick="alert('Book Coming Soon!')">
+
+Read My Book
+
+</button>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="images/christo.jpg">
+
+<img src="images/christo.jpg">
+
+<img src="images/christo.jpg">
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="card contact">
+
+<p>
+
+📧
+
+<a href="mailto:christojosephtalks@gmail.com">
+
+christojosephtalks@gmail.com
+
+</a>
+
+</p>
+
+<p>
+
+📸
+
+<a href="https://www.instagram.com/christo_joseph_mathew/" target="_blank">
+
+@christo_joseph_mathew
+
+</a>
+
+</p>
+
+<p>
+
+Thank you for visiting my website.
+
+I hope my writing inspires you and becomes part of your journey.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 style="font-family:Cinzel;color:gold;">
+
+CHRISTOZ BOOK KAMPANY
+
+</h2>
+
+<br>
+
+<p>
+
+Designed for
+
+<b>Christo Joseph</b>
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 CHRISTOZ BOOK KAMPANY
+
+<br>
+
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script>
+
+const sections=document.querySelectorAll("section");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+
+{opacity:0,transform:"translateY(50px)"},
+
+{opacity:1,transform:"translateY(0)"}
+
+],{
+
+duration:900,
+
+fill:"forwards"
+
+});
+
+}
+
+});
+
+});
+
+sections.forEach(section=>observer.observe(section));
+
+CHRISTOZ BOOK KAMPANY/
+│
+├── index.html
+└── images/
+    └── christo.jpg
+
+  </script>
+
+  </html>
