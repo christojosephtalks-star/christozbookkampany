@@ -1,2 +1,2 @@
 # christozbookkampany
-Official website of author Christo Joseph
+Official website of Author Christo Joseph
